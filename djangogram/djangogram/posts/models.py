@@ -25,8 +25,8 @@ class Post(TimeStamedModel):
                     related_name='post_image_likes'
             )
 
-    # def __str__(self):
-    #     return f"{self.author}: {self.caption}"
+    def __str__(self):
+        return f"{self.author}: {self.caption}"
 
 
 class Comment(TimeStamedModel):
@@ -44,5 +44,5 @@ class Comment(TimeStamedModel):
         )
     contents = models.TextField(blank=True)
 
-    # def __str__(self):
-    #     return f"{self.author}: {self.contents}"
+    def __str__(self):
+        return f"{self.author}: {self.contents}"
