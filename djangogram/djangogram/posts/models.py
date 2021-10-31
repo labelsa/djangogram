@@ -17,8 +17,8 @@ class Post(TimeStamedModel):
                 on_delete=models.CASCADE, 
                 related_name= 'post_author'
             )
-    image = models.ImageField(blank=False)
-    caption = models.TextField(blank=False)
+    image = models.ImageField(blank=False) # 공백 허용X ( 필수값 )
+    caption = models.TextField(blank=False) # 공백 허용X ( 필수값 )
     image_likes = models.ManyToManyField(
                     user_model.User,
                     blank=True,
